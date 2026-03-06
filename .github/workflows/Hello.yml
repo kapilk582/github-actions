@@ -11,7 +11,7 @@ jobs:
   greet:
   
   # this is the github runner named ubantu-latest
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: say hello to users
         run: echo "hello dosto"
