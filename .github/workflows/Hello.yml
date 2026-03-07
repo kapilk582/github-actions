@@ -2,8 +2,7 @@
 name: Hello
 # runs on trigger
 on:
-  push:
-    branches: [main]
+  workflow_dispatch: 
 #these are the jobs inside the workflow
 jobs:
 
