@@ -4,7 +4,7 @@ name: CICD
 on:
   workflow_dispatch: 
     inputs:
-      evironment: 
+      environment: 
         description: this is the environment value where this workflow runs
         default: "dev"
         required: true
@@ -13,7 +13,6 @@ on:
              - dev
              - prod
              - staging
-
   
 jobs:
 # every jobs needs seperate runner thats called parallelism
@@ -35,6 +34,7 @@ jobs:
       - name: test the code
         run: echo "test the container"
   deploy:
+    if: ${{ github.event.inputs.environment == 'dev' }}
     needs: [build, test]
     runs-on: ubuntu-latest
     steps:
