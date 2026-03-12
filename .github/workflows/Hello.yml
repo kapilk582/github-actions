@@ -2,11 +2,11 @@
 name: Hello
 # runs on trigger
 on:
-  push:
-    branches: [main]
+ workflow_dispatch: 
+  #push: branches: [main]
     # paths defined as rules when change in yml file when it will run on push
-    paths:
-      - "**.yml"
+   # paths:
+     # - "**.yml"
 #these are the jobs inside the workflow
 jobs:
 
